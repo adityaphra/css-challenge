@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Tip calculator app</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <img src="images/logo.svg" alt="logo" class="logo" />
+      </nav>
+    </header>
+
+    <main class="container">
+      <section class="calculator">
+        <form class="calculator-form">
+          <div class="label-group">
+            <label for="bill" class="label">Bill</label>
+            <div class="message"></div>
+          </div>
+
+          <input
+            type="number"
+            id="bill"
+            class="input-number bg-image icon-dollar"
+            placeholder="0"
+          />
+          <div class="label-group">
+            <label class="label">Select Tip %</label>
+            <div class="message"></div>
+          </div>
+          <div class="tip" id="tip">
+            <div class="tip-item">
+              <input
+                type="radio"
+                id="percent-5"
+                value="5"
+                name="tip-value"
+                class="input-radio"
+              />
+              <label for="percent-5">5%</label>
+            </div>
+            <div class="tip-item">
+              <input
+                type="radio"
+                id="percent-10"
+                value="10"
+                name="tip-value"
+                class="input-radio"
+              />
+              <label for="percent-10">10%</label>
+            </div>
+            <div class="tip-item">
+              <input
+                type="radio"
+                id="percent-15"
+                value="15"
+                name="tip-value"
+                class="input-radio"
+              />
+              <label for="percent-15">15%</label>
+            </div>
+            <div class="tip-item">
+              <input
+                type="radio"
+                id="percent-25"
+                value="25"
+                name="tip-value"
+                class="input-radio"
+              />
+              <label for="percent-25">25%</label>
+            </div>
+            <div class="tip-item">
+              <input
+                type="radio"
+                id="percent-50"
+                value="50"
+                name="tip-value"
+                class="input-radio"
+              />
+              <label for="percent-50">50%</label>
+            </div>
+            <div class="custom-tip">
+              <input
+                type="number"
+                class="input-number"
+                placeholder="Custom"
+                name="tip-value"
+                id="custom-tip"
+              />
+            </div>
+          </div>
+          <div class="label-group">
+            <label class="label" for="nop">Number of People</label>
+            <div class="message"></div>
+          </div>
+
+          <input
+            type="number"
+            id="nop"
+            class="input-number bg-image icon-person"
+            placeholder="0"
+          />
+        </form>
+      </section>
+
+      <section class="result">
+        <div class="total">
+          <div class="total-item">
+            <div class="detail">
+              <span> Tip Amount</span>
+              <span> / person</span>
+            </div>
+            <div class="price" id="tip-amount-price">0.00</div>
+          </div>
+          <div class="total-item">
+            <div class="detail">
+              <span> Total</span>
+              <span> / person</span>
+            </div>
+            <div class="price" id="total-price">0.00</div>
+          </div>
+        </div>
+        <button type="submit" class="btn">Reset</button>
+      </section>
+    </main>
+  </body>
+</html>
