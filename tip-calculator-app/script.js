@@ -27,6 +27,8 @@ customTipInput.addEventListener('focus', (e) => {
   tipPercentElement.forEach((elem) => {
     elem.checked = false
   })
+
+  calculate()
 })
 
 customTipInput.addEventListener('input', (e) => {
